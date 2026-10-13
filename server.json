@@ -1,0 +1,28 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Mamoo85/open-data-actors-mcp",
+  "description": "24 public-data Apify actors (sanctions, SEC Form D, WARN, FMCSA, SEO, jobs) as MCP tools.",
+  "repository": {
+    "url": "https://github.com/Mamoo85/open-data-actors-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "open-data-actors-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "APIFY_TOKEN",
+          "description": "Apify API token",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

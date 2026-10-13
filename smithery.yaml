@@ -1,0 +1,11 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: [apifyToken]
+    properties:
+      apifyToken:
+        type: string
+        description: Your Apify API token (https://console.apify.com/settings/integrations)
+  commandFunction: |-
+    (config) => ({ command: 'node', args: ['src/index.js'], env: { APIFY_TOKEN: config.apifyToken } })
