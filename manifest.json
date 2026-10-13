@@ -1,0 +1,18 @@
+{
+  "manifest_version": "0.2",
+  "name": "open-data-actors-mcp",
+  "display_name": "Open Data Actors",
+  "version": "0.1.0",
+  "description": "24 public-data Apify actors (sanctions, SEC Form D, WARN layoffs, FMCSA, SEO audit, jobs) as MCP tools. By the actors' author; pay-per-result on Apify.",
+  "author": { "name": "Mamoo85", "url": "https://github.com/Mamoo85" },
+  "repository": { "type": "git", "url": "https://github.com/Mamoo85/open-data-actors-mcp" },
+  "homepage": "https://mamoo85.github.io/open-data-actors/",
+  "license": "MIT",
+  "server": {
+    "type": "node",
+    "entry_point": "src/index.js",
+    "mcp_config": { "command": "node", "args": ["${__dirname}/src/index.js"], "env": { "APIFY_TOKEN": "${user_config.apify_token}" } }
+  },
+  "user_config": { "apify_token": { "type": "string", "title": "Apify API token", "description": "From https://console.apify.com/settings/integrations", "sensitive": true, "required": true } },
+  "keywords": ["apify","open-data","lead-generation","sanctions","seo"]
+}

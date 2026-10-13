@@ -9,16 +9,16 @@
   "version": "0.1.0",
   "packages": [
     {
-      "registryType": "npm",
-      "identifier": "open-data-actors-mcp",
-      "version": "0.1.0",
+      "registryType": "mcpb",
+      "identifier": "https://github.com/Mamoo85/open-data-actors-mcp/releases/download/v0.1.0/open-data-actors-mcp-0.1.0.mcpb",
+      "fileSha256": "81f4d34f574e8c80bcb24ba939f07b216fc3647c63d2b689f9e6c6ff1299a810",
       "transport": {
         "type": "stdio"
       },
       "environmentVariables": [
         {
           "name": "APIFY_TOKEN",
-          "description": "Apify API token",
+          "description": "Apify API token (https://console.apify.com/settings/integrations)",
           "isRequired": true,
           "isSecret": true
         }
