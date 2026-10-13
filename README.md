@@ -4,6 +4,18 @@ A thin [Model Context Protocol](https://modelcontextprotocol.io) server that exp
 
 **Disclosure:** I am the author and maintainer of these actors. They run on Apify and are pay-per-result; the Apify free plan credit covers a trial. This server only forwards your tool call to the Apify API with *your* token. It has no backend of its own, stores nothing, and sends nothing anywhere else. If you want Apify's general-purpose MCP server (every Store actor), use [mcp.apify.com](https://mcp.apify.com); this one is a small, fixed, typed subset.
 
+## Hosted (no install)
+
+Stateless streamable-HTTP endpoint: `https://open-data-actors-mcp.vercel.app/mcp`
+
+Bring your own Apify token on every request (`Authorization: Bearer <token>`, or `?token=`). Nothing is stored or logged by us; runs bill to your own Apify account. Rate limit: 30 requests/minute per token.
+
+```
+claude mcp add --transport http open-data-actors https://open-data-actors-mcp.vercel.app/mcp --header "Authorization: Bearer $APIFY_TOKEN"
+```
+
+Verify with a real client: `APIFY_TOKEN=... node test/http.test.mjs`.
+
 ## Install
 
 You need Node 18+ and an Apify API token (<https://console.apify.com/settings/integrations>).
