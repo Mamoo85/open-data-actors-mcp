@@ -4,14 +4,45 @@
   "description": "MCP server exposing 24 public-data Apify actors (sanctions, SEC Form D, WARN layoffs, FMCSA, SEO audit, jobs, etc.) as tools. Thin wrapper over the Apify API; maintained by the actors' author.",
   "type": "module",
   "main": "src/index.js",
-  "bin": { "open-data-actors-mcp": "src/index.js" },
-  "files": ["src", "README.md", "LICENSE", "server.json"],
-  "scripts": { "test": "node test/client.test.mjs" },
+  "bin": {
+    "open-data-actors-mcp": "src/index.js"
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "scripts": {
+    "test": "node test/client.test.mjs"
+  },
   "mcpName": "io.github.Mamoo85/open-data-actors-mcp",
-  "repository": { "type": "git", "url": "git+https://github.com/Mamoo85/open-data-actors-mcp.git" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mamoo85/open-data-actors-mcp.git"
+  },
   "homepage": "https://mamoo85.github.io/open-data-actors/",
   "license": "MIT",
-  "keywords": ["mcp","model-context-protocol","apify","open-data","lead-generation","sanctions","sec","seo","jobs"],
-  "engines": { "node": ">=18" },
-  "dependencies": { "@modelcontextprotocol/sdk": "^1.20.0" }
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "apify",
+    "open-data",
+    "lead-generation",
+    "sanctions",
+    "sec",
+    "seo",
+    "jobs",
+    "ofac",
+    "sec-edgar",
+    "web-scraper",
+    "public-records",
+    "mcp-server"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0"
+  }
 }
