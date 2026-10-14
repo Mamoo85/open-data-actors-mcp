@@ -8,7 +8,7 @@ const t = new StdioClientTransport({ command: process.execPath, args: ["src/inde
 const c = new Client({ name: "test", version: "1" });
 await c.connect(t);
 const { tools } = await c.listTools();
-assert.equal(tools.length, 24);
+assert.equal(tools.length, 29);
 for (const x of tools) { assert.ok(x.description && x.inputSchema.type === "object", x.name); }
 console.log("listTools ok:", tools.length, "tools");
 const bad = await c.callTool({ name: "nope", arguments: {} });

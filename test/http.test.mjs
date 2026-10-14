@@ -8,7 +8,7 @@ const c = new Client({ name: "http-test", version: "1" });
 await c.connect(new StreamableHTTPClientTransport(new URL(url), { requestInit: { headers: { Authorization: `Bearer ${token}` } } }));
 const { tools } = await c.listTools();
 console.log("tools:", tools.length);
-if (tools.length !== 24) process.exit(1);
+if (tools.length !== 29) process.exit(1);
 if (token) {
   const r = await c.callTool({ name: "sanctions_screening", arguments: { names: ["Gazprombank"], max_results: 3 } });
   console.log("isError:", !!r.isError, r.content[0].text.slice(0, 400));

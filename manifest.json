@@ -3,7 +3,7 @@
   "name": "open-data-actors-mcp",
   "display_name": "Open Data Actors",
   "version": "0.1.0",
-  "description": "24 public-data Apify actors (sanctions, SEC Form D, WARN layoffs, FMCSA, SEO audit, jobs) as MCP tools. By the actors' author; pay-per-result on Apify.",
+  "description": "29 public-data Apify actors (sanctions, SEC Form D, FMCSA, SEO, jobs, Google Maps, TikTok, YouTube comments, Amazon, SAM.gov) as MCP tools. By the actors' author; pay-per-result on Apify.",
   "author": { "name": "Mamoo85", "url": "https://github.com/Mamoo85" },
   "repository": { "type": "git", "url": "https://github.com/Mamoo85/open-data-actors-mcp" },
   "homepage": "https://mamoo85.github.io/open-data-actors/",

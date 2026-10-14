@@ -1,6 +1,6 @@
 # open-data-actors-mcp: MCP server for public-data Apify actors (sanctions, SEC Form D, WARN, FMCSA)
 
-A thin [Model Context Protocol](https://modelcontextprotocol.io) server that exposes 24 public-data [Apify](https://apify.com) actors as tools: sanctions screening, SEC Form D funding leads, WARN layoff notices, FMCSA new carriers, technical SEO audits, tech-stack detection, job boards, building permits, and more.
+A thin [Model Context Protocol](https://modelcontextprotocol.io) server that exposes 29 public-data [Apify](https://apify.com) actors as tools: sanctions screening, SEC Form D funding leads, WARN layoff notices, FMCSA new carriers, technical SEO audits, tech-stack detection, job boards, building permits, Google Maps places, TikTok profiles, YouTube comments, Amazon best sellers, SAM.gov federal bids, and more.
 
 **Disclosure:** I am the author and maintainer of these actors. They run on Apify and are pay-per-result; the Apify free plan credit covers a trial. This server only forwards your tool call to the Apify API with *your* token. It has no backend of its own, stores nothing, and sends nothing anywhere else. If you want Apify's general-purpose MCP server (every Store actor), use [mcp.apify.com](https://mcp.apify.com); this one is a small, fixed, typed subset.
 
@@ -64,6 +64,11 @@ Each tool takes the actor's own input fields plus `max_results` (default 25, cap
 | `amazon_product_search` | Amazon Product Search: prices, ratings, ASINs | [Store](https://apify.com/transparent_meteorite/amazon-product-search) |
 | `linkedin_public_jobs` | LinkedIn Public Jobs Scraper (no login) | Salary & Level | [Store](https://apify.com/transparent_meteorite/linkedin-public-jobs) |
 | `meta_ad_library` | Meta Ad Library Scraper: Facebook & Instagram Ads | [Store](https://apify.com/transparent_meteorite/meta-ad-library) |
+| `google_maps_places_scraper` | Google Maps Scraper: Places, Phones, Emails, Reviews | [Store](https://apify.com/transparent_meteorite/google-maps-places-scraper) |
+| `tiktok_public_profile_scraper` | TikTok Profile Scraper: Followers, Posts, Bio Email, $2.5/1K | [Store](https://apify.com/transparent_meteorite/tiktok-public-profile-scraper) |
+| `youtube_comments_scraper` | YouTube Comments Scraper: Comments + Replies, $1/1K | [Store](https://apify.com/transparent_meteorite/youtube-comments-scraper) |
+| `amazon_bestsellers` | Amazon Best Sellers Scraper: Ranks, 21 Countries, $1.9/1K | [Store](https://apify.com/transparent_meteorite/amazon-bestsellers) |
+| `sam_gov_opportunities` | SAM.gov Contract Opportunities: Federal Bids & RFPs | [Store](https://apify.com/transparent_meteorite/sam-gov-opportunities) |
 
 ## Cost
 
@@ -71,7 +76,7 @@ Each call starts an Apify run and you pay Apify the actor's pay-per-result price
 
 ## Tests
 
-`npm test` starts the server and drives it with the real MCP SDK client over stdio: lists tools, checks error handling, and (when `APIFY_TOKEN` is set) makes one live `tools/call`. Verified 2026-10-13: 24 tools listed, live `sanctions_screening` call returned data.
+`npm test` starts the server and drives it with the real MCP SDK client over stdio: lists tools, checks error handling, and (when `APIFY_TOKEN` is set) makes one live `tools/call`. Verified 2026-10-14: 29 tools listed, live `sanctions_screening` call returned data.
 
 ## Development
 
