@@ -1,4 +1,4 @@
-# open-data-actors-mcp
+# open-data-actors-mcp: MCP server for public-data Apify actors (sanctions, SEC Form D, WARN, FMCSA)
 
 A thin [Model Context Protocol](https://modelcontextprotocol.io) server that exposes 24 public-data [Apify](https://apify.com) actors as tools: sanctions screening, SEC Form D funding leads, WARN layoff notices, FMCSA new carriers, technical SEO audits, tech-stack detection, job boards, building permits, and more.
 
